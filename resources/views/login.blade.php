@@ -46,6 +46,12 @@
         </div>
         @endif
 
+        @if(session()->has('successSending'))
+        <div class="alert alert-success">
+            {{ session()->get('successSending') }}
+        </div>
+        @endif
+
     </form>
 
 

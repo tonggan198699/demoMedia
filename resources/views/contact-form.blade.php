@@ -16,17 +16,18 @@
           {!! csrf_field() !!}
 
           <div class="form-group">
-              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+              <input type="text" class="form-control" name="senderName" placeholder="Enter your name" required>
           </div>
 
           <div class="form-group">
-            <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+            <input type="text" class="form-control" name="senderEmail" placeholder="Enter your email address" required>
           </div>
 
           <div class="form-group">
-            <textarea type="text" class="form-control" id="message" name="message" required="required" rows="3" required></textarea>
+            <textarea type="text" class="form-control" name="message" required="required" rows="3" required></textarea>
           </div>
 
+          <a class="btn btn-info" href="/login">Back</a>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 

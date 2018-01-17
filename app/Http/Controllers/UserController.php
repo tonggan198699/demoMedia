@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
-
+use App\Mail\ContactFormEmail;
 
 class UserController extends Controller
 {
@@ -32,6 +32,20 @@ class UserController extends Controller
         } else {
             return redirect()->back()->with('failure', 'You have entered incorrect logins, please try again!');
         }
+    }
+
+    public function sendEmail(Request $request)
+    {
+
+      $contact = [];
+
+      $contact['senderName'] = $request->get('senderName');
+      $contact['senderEmail'] = $request->get('senderEmail');
+      $contact['message'] = $request->get('message');
+
+      \Mail::send(new ContactFormEmail($contact));
+
+      return redirect('login')->with('successSending', 'You have successfully email to us!');
 
     }
 
