@@ -40,6 +40,13 @@
             </div>
         </div>
 
+        @if(session()->has('failure'))
+        <div class="alert alert-danger">
+            {{ session()->get('failure') }}
+        </div>
+        @endif
+
     </form>
+
 
   @endsection
