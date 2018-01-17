@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('app')
 
 
   @section('content')
@@ -8,33 +8,35 @@
     <form method="POST" action="/login">
     {{ csrf_field() }}
 
-        <div class="form-group">
-            <div class="col-md-6">
-                <input id="email" type="email" class="form-control" name="email" required autofocus>
+        <div class="form-row">
+
+            <div class="form-group col-md-4">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter a value email address">
+
                 @if ($errors->has('email'))
                     <span class="help-block">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                 @endif
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-6">
-              <input id="password" type="password" class="form-control" name="password" required>
-              @if ($errors->has('password'))
-                  <span class="help-block">
-                      <strong>{{ $errors->first('password') }}</strong>
-                  </span>
-              @endif
+            <div class="form-group col-md-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+
+                @if ($errors->has('password'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                @endif
             </div>
+
         </div>
 
-        <div class="form-group">
-            <div class="col-md-8 col-md-offset-4">
-                <button type="submit" class="btn btn-primary">
-                    Login
-                </button>
+        <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Login</button>
             </div>
         </div>
 

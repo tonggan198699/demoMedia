@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// route for showing the login page
+Route::get('/login', 'UserController@index');
+
+// route for post request to login
+Route::post('/login', 'UserController@login');
