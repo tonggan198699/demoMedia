@@ -20,3 +20,6 @@ Route::get('/login', 'UserController@index');
 
 // route for post request to login
 Route::post('/login', 'UserController@login');
+
+// route for post request to send email
+Route::post('/sendEmail', 'UserController@sendEmail');

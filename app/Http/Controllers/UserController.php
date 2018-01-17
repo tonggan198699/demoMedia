@@ -21,14 +21,12 @@ class UserController extends Controller
           'password' => 'required|string|min:6',
       ]);
 
-
       $userdata = [
           'email'     => request('email'),
           'password'  => request('password')
         ];
 
         if (Auth::attempt($userdata)) {
-
           $request->session()->flash('success', 'You have successfully logged in!');
             return view('contact-form');
         } else {
