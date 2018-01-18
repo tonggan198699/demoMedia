@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 // route for showing the login page
@@ -23,3 +23,7 @@ Route::post('/login', 'UserController@login');
 
 // route for post request to send email
 Route::post('/sendEmail', 'UserController@sendEmail');
+
+Route::get('/register', function () {
+    return view('register');
+});

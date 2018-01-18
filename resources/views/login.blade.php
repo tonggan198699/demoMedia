@@ -37,6 +37,7 @@
         <div class="form-group row">
             <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">Login</button>
+              <a href="/register" class="btn btn-link">No yet register?</a>
             </div>
         </div>
 
