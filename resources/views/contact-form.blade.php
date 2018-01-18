@@ -19,19 +19,19 @@
 
     <div class="col-md-6">
 
-        <form class="emailForm" method="POST" action="/sendEmail">
+        <form class="emailForm" method="POST" action="/sendEmail" id="contact-form">
           {!! csrf_field() !!}
 
           <div class="form-group">
-              <input type="text" class="form-control" name="senderName" placeholder="Enter your name" required>
+              <input type="text" class="form-control" name="senderName" placeholder="Enter your name">
           </div>
 
           <div class="form-group">
-            <input type="text" class="form-control" name="senderEmail" placeholder="Enter your email address" required>
+            <input type="text" class="form-control" name="senderEmail" placeholder="Enter your email address">
           </div>
 
           <div class="form-group">
-            <textarea type="text" class="form-control" name="message" required="required" rows="3" required></textarea>
+            <textarea type="text" class="form-control" name="message" required="required" rows="3"></textarea>
           </div>
 
           <a class="btn btn-info" href="/login">Back</a>

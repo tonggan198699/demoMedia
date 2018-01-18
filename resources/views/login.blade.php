@@ -5,14 +5,14 @@
 
   <h1>Login Page</h1>
 
-    <form method="POST" action="/login">
+    <form method="POST" action="/login" id="login-form">
     {{ csrf_field() }}
 
         <div class="form-row">
 
             <div class="form-group col-md-4">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter a value email address">
+                <input type="email" class="form-control" name="email" placeholder="Enter a value email address">
 
                 @if ($errors->has('email'))
                     <span class="help-block">
@@ -23,7 +23,7 @@
 
             <div class="form-group col-md-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                <input type="password" class="form-control" name="password" placeholder="Enter your password">
 
                 @if ($errors->has('password'))
                     <span class="help-block">
@@ -41,9 +41,9 @@
             </div>
         </div>
 
-        @if(session()->has('failure'))
+        @if(session()->has('failure-login'))
         <div class="alert alert-danger">
-            {{ session()->get('failure') }}
+            {{ session()->get('failure-login') }}
         </div>
         @endif
 
