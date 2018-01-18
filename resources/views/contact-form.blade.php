@@ -8,6 +8,13 @@
   </div>
   @endif
 
+  @if(session()->has('success-register'))
+  <div class="alert alert-success">
+      {{ session()->get('success-register') }}
+  </div>
+  @endif
+
+
   <h1>Contact Form</h1>
 
     <div class="col-md-6">
