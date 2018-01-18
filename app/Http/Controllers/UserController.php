@@ -27,7 +27,7 @@ class UserController extends Controller
           $request->session()->flash('success', 'You have successfully logged in! '.$request->email);
             return view('contact-form');
         } else {
-            return redirect()->back()->with('failure', 'You have entered incorrect logins, please try again!');
+            return redirect()->back()->with('failure-login', 'You have entered incorrect logins, please try again!');
         }
     }
 
