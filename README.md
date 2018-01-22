@@ -16,14 +16,14 @@
 
 ## Application pictures
 
-To register
+**To register**
 <p align="center"><img src="https://image.ibb.co/e3Z6KG/demo_Media2.jpg"></p>
 
-To Log in
+**To Log in**
 <p align="center"><img src="https://image.ibb.co/bQ0kDb/demo_Media1.jpg"></p>
 
-To send email with contact form
+**To send email with contact form**
 <p align="center"><img src="https://image.ibb.co/mTQrmw/demo_Media3.jpg"></p>
 
-To receive receive from Mailtrap
+**To receive receive from Mailtrap**
 <p align="center"><img src="https://image.ibb.co/c8TcRw/demo_Media4.jpg"></p>
