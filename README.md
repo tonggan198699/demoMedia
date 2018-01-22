@@ -15,7 +15,7 @@
 - On the browser hit the url to access to the login page.  
 
 
-#Application pictures
+##Application pictures
 
 To register
 <p align="center"><img src="https://image.ibb.co/e3Z6KG/demo_Media2.jpg"></p>
